@@ -467,10 +467,7 @@ slate.Variants = (function() {
           return _.isEqual(variant[values.index], values.value);
         });
       });
-      //Show the descriptions for specific Options.
-      //DEC 
-      $('.variantDesc').hide();
-      $('#'+found.id).show();
+
 
       return found;
     },
@@ -577,6 +574,10 @@ slate.Variants = (function() {
      */
     _updateMasterSelect: function(variant) {
       $(this.originalSelectorId, this.$container).val(variant.id);
+         //DEC
+      $('.variantDesc').hide();
+      $('#'+variant.id).show();
+      alert(variant.id);
     }
   });
 
