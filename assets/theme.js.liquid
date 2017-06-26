@@ -467,6 +467,10 @@ slate.Variants = (function() {
           return _.isEqual(variant[values.index], values.value);
         });
       });
+      //Show the descriptions for specific Options.
+      //DEC 
+      $('.variantDesc').hide();
+      $('#'+found.id).show();
 
       return found;
     },
