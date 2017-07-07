@@ -14,4 +14,8 @@
     soldOut: {{ 'products.product.sold_out' | t | json }},
     unavailable: {{ 'products.product.unavailable' | t | json }}
   };
+  //Show the first Variants description
+ 
+  $('#{{ product.variants.first.id }}').show();
+
 </script>
