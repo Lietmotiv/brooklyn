@@ -158,6 +158,17 @@
           {% if section.settings.social_sharing_products %}
             {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
           {% endif %}
+          <div style="color:#FFFFFF !important;">
+          <!--Dump product data for admin use -->
+          {% if product.variants.size == 1 %} %}No Variants{% else %}
+
+              {% for variant in product.variants %}
+                  {{ variant.id }} - {{ variant.title }}<br> 
+                  {% unless forloop.last == true %} / {% endunless %}
+              {% endfor %}
+          {% endif %}
+          <!--End Dump-->
+          </div>
         </div>
       </div>
     </div>
